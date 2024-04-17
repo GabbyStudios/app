@@ -88,7 +88,7 @@
 }
 
 /* Media query per dispositivi di dimensioni inferiori a 768px (tablet) */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     header {
         padding: 10px 2%;
     }
@@ -96,7 +96,10 @@
         padding: 20px 2%;
     }
     .feature {
-        width: calc(50% - 20px);
+        width: calc(100% - 40px); /* Sottrai 40px per il padding */
+        margin-left: 20px; /* Aggiungi uno spazio a sinistra per il padding */
+        margin-right: 20px; /* Aggiungi uno spazio a destra per il padding */
+        padding: 20px; /* Rimuove il padding laterale */
     }
 }
 
