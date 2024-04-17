@@ -2,10 +2,237 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=https://gabbystudiosdev.github.io/ARCHIVES/marzo24/Content/App/Gabriel%20Jones/index.html">
-    <title>Reindirizzamento...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GabbyStudios</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global Styles */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+                Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            padding-top: 50px;
+        }
+
+        a {
+            color: #007AFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: #fff;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 50px;
+            height: auto;
+        }
+
+        .menu-toggle {
+            display: none; /* Nasconde il toggle menu per desktop */
+        }
+
+        header nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin-left: 20px;
+        }
+
+        /* Main Content Styles */
+        main {
+            padding: 20px 5%;
+            text-align: center;
+        }
+
+        .hero {
+            margin-bottom: 50px;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .feature {
+            width: calc(33.333% - 20px);
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #5CE1E6;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #f9f9f9;
+            color: #666;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        .color {
+            color: #5CE1E6;
+            border: 2px #5CE1E6;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        /* Media query per dispositivi di dimensioni inferiori a 768px (tablet) */
+        @media (max-width: 768px) {
+            header {
+                padding: 10px 2%;
+            }
+            main {
+                padding: 20px 2%;
+            }
+            .feature {
+                width: calc(50% - 20px);
+            }
+        }
+
+        /* Media query per dispositivi di dimensioni inferiori a 480px (telefono) */
+        @media (max-width: 480px) {
+            .menu-toggle {
+                display: block; /* Mostra il toggle menu per dispositivi mobili */
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                cursor: pointer;
+            }
+
+            header nav {
+                display: none; /* Nasconde il menu di navigazione principale */
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background-color: #fff;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                z-index: 999;
+                padding: 10px;
+            }
+
+            header nav ul {
+                flex-direction: column; /* Imposta il layout a colonna per il menu di navigazione mobile */
+            }
+
+            header nav ul li {
+                margin-left: 0; /* Resetta il margine per il layout a colonna */
+                margin-bottom: 10px; /* Aggiunge spazio tra le voci di menu */
+            }
+
+            header nav ul li:last-child {
+                margin-bottom: 0; /* Rimuove lo spazio inferiore dall'ultimo elemento di menu */
+            }
+
+            header nav ul li a {
+                display: block; /* Rendi i link a blocchi per riempire tutto lo spazio disponibile */
+                padding: 10px;
+                border-radius: 5px;
+                background-color: #f9f9f9;
+                color: #333;
+            }
+
+            header nav ul li a:hover {
+                background-color: #eaeaea;
+            }
+
+            header.nav-active nav {
+                display: block; /* Mostra il menu di navigazione quando il toggle è attivo */
+            }
+        }
+    </style>
 </head>
 <body>
-    <p>Se non vieni reindirizzato, <a href="https://gabbystudiosdev.github.io/ARCHIVES/marzo24/Content/App/Gabriel%20Jones/index.html">clicca qui</a>.</p>
+<header>
+    <div>
+        <img class="logo" src="logo.png" alt="Logo">
+    </div>
+    <div class="menu-toggle">&#9776;</div>
+    <nav>
+        <ul>
+            <li><a href="https://gabbystudios.github.io/Pagina-Globale/" target="_blank">Pagina Globale</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="spazio-vuoto">
+        <section class="hero">
+            <div class="spazio"></div>
+            <section class="color">
+                <div class="animate__animated animate__fadeInUp">
+                    <h2>Welcome in Gabby Studios</h2>
+                    <p>Find the service you need</p>
+                </div>
+            </section>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <h3>Dev</h3>
+                <p>Vai al reparto dei developer ufficiale di Gabriel Jones per accedere a tantissimi modelli di siti web e risorse per developer per l'utilizzo di piattaforme taggate Gabriel Jones.</p>
+                <a href="https://github.com/GabbyStudiosDev/" target="_blank">GabbyStudiosDev</a>
+            </div>
+            <div class="feature">
+                <h3>Gabriel System</h3>
+                <p>Tu fai parte dei team firmati "Gabriel Jones System Services" vai su Gabriel System per accedere all'area personale riservata al tuo team.</p>
+                <a href="https://gabrieljones.altervista.org/" target="_blank">Vai a Gabriel Jones</a>
+            </div>
+            <div class="feature">
+                <h3>Gabriel Jones Official Site</h3>
+                <p>Hey, ciao, vai sul mio sito per conoscermi!!</p>
+                <a href="https://gabrieljones.altervista.org/" target="_blank">Vai a Gabriel Jones</a>
+            </div>
+        </section>
+        <div class="spazio"></div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 Gabriel Jones Dev <a href="https://gjdev.it/" target="_blank">Vai a Gabriel Jones</a>. All rights reserved.</p>
+</footer>
+
+<script>
+    document.querySelector('.menu-toggle').addEventListener('click', function () {
+        document.querySelector('header').classList.toggle('nav-active');
+    });
+</script>
+
 </body>
 </html>
