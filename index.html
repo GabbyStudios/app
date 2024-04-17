@@ -77,21 +77,22 @@
             margin-bottom: 50px;
         }
 
-        .features {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
+/* Stile per le caratteristiche */
+.features {
+    display: flex;
+    flex-direction: column; /* Mostra le caratteristiche in colonna */
+}
 
-        .feature {
-            width: calc(33.333% - 20px);
-            margin-bottom: 20px;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            background-color: #5CE1E6;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+/* Stile per le caratteristiche individuali */
+.feature {
+    width: 100%; /* Ogni caratteristica occupa l'intera larghezza */
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #5CE1E6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
         footer {
             background-color: #f9f9f9;
