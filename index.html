@@ -77,15 +77,6 @@
             margin-bottom: 50px;
         }
 
-/* Stile per le caratteristiche */
-.features {
-    display: flex;
-    flex-direction: column; /* Mostra le caratteristiche in colonna */
-    justify-content: center; /* Centra verticalmente */
-    align-items: center; /* Centra orizzontalmente */
-}
-
-/* Stile per le caratteristiche individuali */
 .feature {
     width: 100%; /* Ogni caratteristica occupa l'intera larghezza */
     margin-bottom: 20px;
@@ -94,6 +85,76 @@
     border-radius: 10px;
     background-color: #5CE1E6;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Media query per dispositivi di dimensioni inferiori a 768px (tablet) */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 2%;
+    }
+    main {
+        padding: 20px 2%;
+    }
+    .feature {
+        width: calc(50% - 20px);
+    }
+}
+
+/* Media query per dispositivi di dimensioni inferiori a 480px (telefono) */
+@media (max-width: 480px) {
+    .menu-toggle {
+        display: block; /* Mostra il toggle menu per dispositivi mobili */
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+
+    header nav {
+        display: none; /* Nasconde il menu di navigazione principale */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        padding: 10px;
+    }
+
+    header nav ul {
+        flex-direction: column; /* Imposta il layout a colonna per il menu di navigazione mobile */
+    }
+
+    header nav ul li {
+        margin-left: 0; /* Resetta il margine per il layout a colonna */
+        margin-bottom: 10px; /* Aggiunge spazio tra le voci di menu */
+    }
+
+    header nav ul li:last-child {
+        margin-bottom: 0; /* Rimuove lo spazio inferiore dall'ultimo elemento di menu */
+    }
+
+    header nav ul li a {
+        display: block; /* Rendi i link a blocchi per riempire tutto lo spazio disponibile */
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        color: #333;
+    }
+
+    header nav ul li a:hover {
+        background-color: #eaeaea;
+    }
+
+    header.nav-active nav {
+        display: block; /* Mostra il menu di navigazione quando il toggle è attivo */
+    }
+
+    .feature {
+        width: 100%; /* Ogni caratteristica occupa l'intera larghezza */
+        padding: 20px; /* Rimuove il padding laterale */
+    }
 }
 
         footer {
