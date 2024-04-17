@@ -243,6 +243,11 @@
                 display: block; /* Mostra il menu di navigazione quando il toggle è attivo */
             }
         }
+        header nav ul li a.current-page {
+    background-color: #5CE1E6;
+    color: #fff; /* Cambia anche il colore del testo */
+}
+
     </style>
 </head>
 <body>
@@ -302,6 +307,21 @@
         <div class="spazio"></div>
     </div>
 </main>
+<script>
+    // Ottieni il percorso della pagina corrente
+    var path = window.location.pathname;
+    
+    // Ottieni tutti i link nella navbar
+    var navLinks = document.querySelectorAll('header nav ul li a');
+    
+    // Itera sui link e controlla se il loro href corrisponde al percorso della pagina corrente
+    for (var i = 0; i < navLinks.length; i++) {
+        if (navLinks[i].getAttribute('href') === path) {
+            // Se il link corrisponde al percorso della pagina corrente, aggiungi una classe per evidenziarlo
+            navLinks[i].classList.add('current-page');
+        }
+    }
+</script>
 
 <footer>
     <p>&copy; 2024 Gabriel Jones Dev <a href="https://gjdev.it/" target="_blank">Vai a Gabriel Jones</a>. All rights reserved.</p>
