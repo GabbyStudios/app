@@ -308,20 +308,25 @@
     </div>
 </main>
 <script>
-    // Ottieni il percorso della pagina corrente
+    // Ottieni il percorso della pagina corrente (senza il nome del dominio)
     var path = window.location.pathname;
+    // Estrai solo il nome del file dalla stringa del percorso
+    var currentPage = path.split("/").pop();
     
     // Ottieni tutti i link nella navbar
     var navLinks = document.querySelectorAll('header nav ul li a');
     
-    // Itera sui link e controlla se il loro href corrisponde al percorso della pagina corrente
+    // Itera sui link e controlla se il loro href corrisponde al nome del file della pagina corrente
     for (var i = 0; i < navLinks.length; i++) {
-        if (navLinks[i].getAttribute('href') === path) {
-            // Se il link corrisponde al percorso della pagina corrente, aggiungi una classe per evidenziarlo
+        // Estrai il nome del file del link corrente
+        var linkPath = navLinks[i].getAttribute('href').split("/").pop();
+        if (linkPath === currentPage) {
+            // Se il link corrisponde al nome del file della pagina corrente, aggiungi una classe per evidenziarlo
             navLinks[i].classList.add('current-page');
         }
     }
 </script>
+
 
 <footer>
     <p>&copy; 2024 Gabriel Jones Dev <a href="https://gjdev.it/" target="_blank">Vai a Gabriel Jones</a>. All rights reserved.</p>
